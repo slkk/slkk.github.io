@@ -1,10 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>盛利的网站</title>
+    <title>内蒙古文化平台</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url("img/homeImage.jpg") no-repeat;
+            background-size: cover;
+
+        }
+        .time{
+            /*opacity: 0.5;*/
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
 </head>
 <body>
-<p>这是我的网站</p>
+    <span class="time">3</span>
+    <script>
+        window.onload = function () {
+            var time = 3;
+            var timer = setInterval(function () {
+
+                if (time === 1) {
+
+                    clearInterval(timer);
+                    window.location="html/mlnm.html";
+                    return;
+                }
+                time--;
+                $('.time').text(time);
+            }, 1000);
+        };
+    </script>
 </body>
 </html>

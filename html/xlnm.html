@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>雪亮内蒙</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <style>
+        body{
+            background-image: url(../img/xlnm/xlbj.jpg);
+            background-repeat: no-repeat;
+        }
+        .main{
+            padding-top: 277px;
+            padding-left: 100px;
+            width: 1820px;
+        }
+        .right {
+            position: absolute;
+            display: inline-block;
+            margin-left: 13px;
+            width: 690px;
+        }
+        .right img{
+            margin-right: 10px;
+            margin-bottom: 13px;
+            transition: all 0.2s;
+        }
+        .right img:hover{
+            transition: all 0.5s;
+            position: relative;
+            transform: scale(1.15);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <img id="leftImage" src="../img/xlnm/left.png" alt="">
+    <div class="right">
+        <a href="#"><img src="../img/xlnm/1.png" alt=""></a>
+        <a href="#"><img src="../img/xlnm/2.png" alt=""></a>
+        <a href="#"><img src="../img/xlnm/3.png" alt=""></a>
+        <a href="#"><img src="../img/xlnm/4.png" alt=""></a>
+    </div>
+</div>
+<script>
+    $(function () {
+        var leftImage = $('#leftImage');
+        $('a')[0].onclick = function () {
+            leftImage.attr('src','../img/xlnm/model_sqjk.png');
+        };
+        $('a')[1].onclick = function () {
+            leftImage.attr('src','../img/xlnm/model_xyjk.png');
+        };
+        $('a')[2].onclick = function () {
+            leftImage.attr('src','../img/xlnm/model_bjpt.png');
+        };
+        $('a')[3].onclick = function () {
+            leftImage.attr('src','../img/xlnm/model_wlnm.png');
+        };
+    })
+</script>
+</body>
+</html>
